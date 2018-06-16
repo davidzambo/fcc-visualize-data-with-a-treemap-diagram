@@ -1,9 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Abel");
 html {
-  font-family: "Abel", sans-serif; }
+  font-family: "Abel", sans-serif;
+  height: 100%; }
 
 body {
-  background-color: #F4F1EC; }
+  background-color: #F4F1EC;
+  height: 100%; }
+
+html,
+body,
+.container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+* {
+  box-sizing: border-box; }
 
 h1, p {
   text-align: center; }
@@ -14,13 +26,17 @@ h1 {
 p {
   margin-top: 0; }
 
+svg {
+  margin-bottom: 2rem; }
+
 .container {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: #F4F1EC; }
+  background-color: #F4F1EC;
+  min-height: 100%; }
 
 .tile {
   stroke: white;
@@ -33,14 +49,18 @@ foreignObject {
 
 .title {
   padding: 5px;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: -0.5px;
-  display: inline-block; }
+  display: inline-block;
+  white-space: pre-line; }
   .title:hover {
     fill: red; }
 
 .hidden {
   display: none; }
+
+.message {
+  text-align: center; }
 
 #tooltip {
   position: absolute;
@@ -51,5 +71,23 @@ foreignObject {
   opacity: 0;
   transition: opacity 0.5s, background-color 1s;
   box-shadow: 4px 4px 10px 5px #333333; }
+
+.legend-container,
+.legend {
+  box-sizing: border-box; }
+
+footer {
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+  width: 100%; }
+  footer * {
+    vertical-align: middle; }
+  footer a {
+    color: white;
+    text-decoration: none; }
+  footer img {
+    height: 1.2rem;
+    width: auto; }
 
 /*# sourceMappingURL=styles.css.map */
